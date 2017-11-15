@@ -42,7 +42,7 @@ public class MyPanelClass extends JPanel {
 //                        //Draw second line 
 //                        g.setColor(Color.GREEN);
 //                        g.drawLine(x2, y1, x1, y2);
-                        
+//                        
 //                        //Draw oval
 //                        g.setColor(Color.BLUE);
 //                        g.fillOval((width- 55) / 2, (height - 55) /2, 55, 55);
@@ -60,6 +60,25 @@ public class MyPanelClass extends JPanel {
 //                        g.setColor(Color.YELLOW);
 //                        g.fillPolygon(p);
                         
+                        
+                        
+                        
+                        g.setColor(Color.BLACK);
+                        g.drawRect(x1 + 10, y1 + 10, x1 + 210, y1 + 150);
+                        
+                        g.setColor(Color.WHITE);
+                        g.fillRect(x1 + 11,  y1 + 11, x1 + 209, y1 + 149);
+                        
+                        g.setColor(Color.RED);
+                        g.fillRect(x1 + 11, y1 + 11, x1 + 209, y1 + 40);
+                        
+                        Polygon triangulo = new Polygon();
+                        triangulo.addPoint(x1 + 11, y1 + 10);
+                        triangulo.addPoint(x1 + 120, y1 + 80 );
+                        triangulo.addPoint(x1 + 11, y1 + 160);
+                        g.setColor(Color.BLUE);
+                        g.fillPolygon(triangulo);
+                     
                         //Draw second polygon
                         Polygon p2 = new Polygon();
                         p2.addPoint(x1 + 25, y1 + 73);
@@ -73,7 +92,10 @@ public class MyPanelClass extends JPanel {
                         p2.addPoint(x1 + 34, y1 + 98);
                         p2.addPoint(x1 + 38, y1 + 83);
                         g.setColor(Color.WHITE);
-                        g.drawPolygon(p2);
+                        g.fillPolygon(p2);
+                        
+                       
+                    
                         
                         
                         
