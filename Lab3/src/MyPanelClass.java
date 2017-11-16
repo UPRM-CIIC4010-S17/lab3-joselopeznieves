@@ -24,7 +24,7 @@ public class MyPanelClass extends JPanel {
                         int height = y2 - y1;
  
                         //Paint the background
-                        g.setColor(Color.DARK_GRAY);
+                        g.setColor(Color.WHITE);
                         g.fillRect(x1, y1, width + 1, height + 1);
                         
 //                        //Draw a border
@@ -62,24 +62,32 @@ public class MyPanelClass extends JPanel {
                         
                         
                         
+                     
                         
-                        g.setColor(Color.BLACK);
-                        g.drawRect(x1 + 10, y1 + 10, x1 + 210, y1 + 150);
                         
-                        g.setColor(Color.WHITE);
-                        g.fillRect(x1 + 11,  y1 + 11, x1 + 209, y1 + 149);
+                        //Franjas Rojas                                             
+                        g.setColor(Color.RED);
+                        g.fillRect(x1 , y1 , width + 1, height / 5);
                         
                         g.setColor(Color.RED);
-                        g.fillRect(x1 + 11, y1 + 11, x1 + 209, y1 + 40);
+                        g.fillRect(x1 , height * 2 / 5, width + 1, height / 5); //height entre la fraccion de la ventana donde debe comenzar 
                         
+                        g.setColor(Color.RED);
+                        g.fillRect(x1 , (height * 4 / 5) + 1, width + 1, height / 5);
+                        
+                        
+                        
+                        //Triangulo azul
                         Polygon triangulo = new Polygon();
-                        triangulo.addPoint(x1 + 11, y1 + 10);
-                        triangulo.addPoint(x1 + 120, y1 + 80 );
-                        triangulo.addPoint(x1 + 11, y1 + 160);
+                        triangulo.addPoint(x1 , y1 );
+                        triangulo.addPoint(width / 2, height / 2 );
+                        triangulo.addPoint(x1 , height + 1);
                         g.setColor(Color.BLUE);
                         g.fillPolygon(triangulo);
-                     
-                        //Draw second polygon
+                        
+                        
+                       
+                        //Estreya
                         Polygon p2 = new Polygon();
                         p2.addPoint(x1 + 25, y1 + 73);
                         p2.addPoint(x1 + 41, y1 + 73);
@@ -93,6 +101,10 @@ public class MyPanelClass extends JPanel {
                         p2.addPoint(x1 + 38, y1 + 83);
                         g.setColor(Color.WHITE);
                         g.fillPolygon(p2);
+                        
+                        
+                    
+                    
                         
                        
                     
